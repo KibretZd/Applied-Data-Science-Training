@@ -61,3 +61,65 @@ Types of Dataset
     Computational Containers:
         - Tabular Structures
         - N-Dimensional Arrays
+
+### EDA
+    - Feature Analysis
+    It is the process of explorig and evaluating dataset features to understand their characterstics, r/nships, importance, and impact on model performance
+    Common acctivities in feature analysis include:
+        . statistical summary
+        corelation analysis
+        distribution analysis
+        feature importance evaluation
+        Dimensionality analysis
+        dulicacy detection
+        -visualization of feature behavior
+    - Data Visualization
+
+#### Types of Feature analysis
+    1 Univariate analysis - single vairiable
+    2. Bivariate analysis - two variables
+     -Techiniques
+        . Num vs Num
+        . Cat vs Num
+        . Cat vs Cat
+    3. Multivariate Analysis - high dimentional
+        - Heatmaps, PCA
+
+#### Correlation
+    - measures the stringth and direction of linear r/ship between two numeric features
+    - values range between -1 tot 1
+        . +1 - Perfect +ve correlation
+        . 0 - no linear r/ship
+        . -1 - Perfect -ve correlation
+        . Techniques:
+            - use Heatmap and correlation matrix
+
+    Multicolinearity is a situation in which two or more independent features in a dataset are highly correlated with each other
+     . VIF (Variance Inflation Factor) is the most commonly used to detect multicolinearity.
+        - a VIF >5 or 10 is considered problematic
+        - 1 - no multicollinearity
+        - >10 seriously multicollineaarity
+#### Data Visualization
+    . Tools
+        - matplotlib - basic ploting, highly customizable
+        - Seaborn - built on matplotlib, easy statistical plots (histogram, heatmaps, boxplots)
+        - plotly - interactive plots that you can zoom, pan and hover over.
+    . Types of Plots and used
+        - histplot - Distribution
+        - boxplot - spread
+        - scatter - relationship between two variables
+        - heatmap - correlation
+
+    Identify unique categoris of categorical features
+    df.nunique() 
+        - Count number of distinct elements in specified axis.
+        - Return Series with number of distinct elements. Can ignore NaN values.
+
+    df.unique() - uniques are returned in order of appearance. Hash table-based unique, therefore does NOT sort.
+        - returns all distinict values in a column
+        - it is also used to identify unique categories of categorical feature.
+        ```python
+        df['property_type'].unique()
+
+
+### Data Spliting (Train /Validation /Test)

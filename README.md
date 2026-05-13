@@ -123,3 +123,22 @@ Types of Dataset
 
 
 ### Data Spliting (Train /Validation /Test)
+
+To get honest, unbiased estimate of how well your model perform on new, unseen data, split your dataset into independent subsets
+
+    - Training set: to train the model
+    - Validation set: to tune hyperparameters
+    - Test set - used for only final evaluation
+Common Spliting Options
+    1. Train/Test split
+        Simple and faster
+        Commonly used for small projects and baseline models
+        Example: 80% Train, 20% Test
+    2. Train/Validation/Test Split
+        More reliable for model tuninng and selection
+        commonly used in real-world ML workflows
+        Example: 60% Train, 20% Validation, 20% Test
+
+Split before preprocessing (imputation, scaling and encoding) to avoid data leaakage
+use stratify = y for classification task to preserve class distribution
+use a fixed random_state (e.g 42) for reproducibility

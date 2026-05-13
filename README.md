@@ -86,13 +86,13 @@ Types of Dataset
         - Heatmaps, PCA
 
 #### Correlation
-    - measures the stringth and direction of linear r/ship between two numeric features
-    - values range between -1 tot 1
-        . +1 - Perfect +ve correlation
-        . 0 - no linear r/ship
-        . -1 - Perfect -ve correlation
-        . Techniques:
-            - use Heatmap and correlation matrix
+. measures the stringth and direction of linear r/ship between two numeric features
+. values range between -1 tot 1:
+    - +1 - Perfect +ve correlation
+    - 0 - no linear r/ship
+    - -1 - Perfect -ve correlation
+    - Techniques:
+        - use Heatmap and correlation matrix
 
     Multicolinearity is a situation in which two or more independent features in a dataset are highly correlated with each other
      . VIF (Variance Inflation Factor) is the most commonly used to detect multicolinearity.
@@ -100,22 +100,25 @@ Types of Dataset
         - 1 - no multicollinearity
         - >10 seriously multicollineaarity
 #### Data Visualization
-    . Tools
-        - matplotlib - basic ploting, highly customizable
-        - Seaborn - built on matplotlib, easy statistical plots (histogram, heatmaps, boxplots)
-        - plotly - interactive plots that you can zoom, pan and hover over.
-    . Types of Plots and used
-        - histplot - Distribution
-        - boxplot - spread
-        - scatter - relationship between two variables
-        - heatmap - correlation
+Tools
 
-    Identify unique categoris of categorical features
-    df.nunique() 
+    - matplotlib - basic ploting, highly customizable
+    - Seaborn - built on matplotlib, easy statistical plots (histogram, heatmaps, boxplots)
+    - plotly - interactive plots that you can zoom, pan and hover over.
+
+Types of Plots and used
+
+    - histplot - Distribution
+    - boxplot - spread
+    - scatter - relationship between two variables
+    - heatmap - correlation
+
+Identify unique categoris of categorical features
+    . df.nunique() 
         - Count number of distinct elements in specified axis.
         - Return Series with number of distinct elements. Can ignore NaN values.
 
-    df.unique() - uniques are returned in order of appearance. Hash table-based unique, therefore does NOT sort.
+    . df.unique() - uniques are returned in order of appearance. Hash table-based unique, therefore does NOT sort.
         - returns all distinict values in a column
         - it is also used to identify unique categories of categorical feature.
         ```python
@@ -129,16 +132,19 @@ To get honest, unbiased estimate of how well your model perform on new, unseen d
     - Training set: to train the model
     - Validation set: to tune hyperparameters
     - Test set - used for only final evaluation
-Common Spliting Options
-    1. Train/Test split
-        Simple and faster
-        Commonly used for small projects and baseline models
-        Example: 80% Train, 20% Test
-    2. Train/Validation/Test Split
-        More reliable for model tuninng and selection
-        commonly used in real-world ML workflows
-        Example: 60% Train, 20% Validation, 20% Test
 
-Split before preprocessing (imputation, scaling and encoding) to avoid data leaakage
-use stratify = y for classification task to preserve class distribution
-use a fixed random_state (e.g 42) for reproducibility
+Common Spliting Options
+
+    . Train/Test split
+        - Simple and faster
+        - Commonly used for small projects and baseline models
+        - Example: 80% Train, 20% Test
+
+    . Train/Validation/Test Split
+        - More reliable for model tuninng and selection
+        - commonly used in real-world ML workflows
+        - Example: 60% Train, 20% Validation, 20% Test
+
+    . before preprocessing (imputation, scaling and encoding) to avoid data leaakage
+    . use stratify = y for classification task to preserve class distribution
+    . use a fixed random_state (e.g 42) for reproducibility
